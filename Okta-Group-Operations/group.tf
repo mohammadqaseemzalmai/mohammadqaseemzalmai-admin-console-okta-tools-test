@@ -1,10 +1,10 @@
 resource "okta_group" "Terraform-TEST" {
     name        = "Terraform-TEST"
-    description = "Test group for Terraform TEST"
+    description = "Terrafrom TEST Group Description"
 }
 
 
 resource "okta_group" "Terraform-TEST1" {
     name        = "Terraform-TEST1"
-    description = "TESt Group 2"
+    description = "Terrafrom TEST1 Group Description"
 }
