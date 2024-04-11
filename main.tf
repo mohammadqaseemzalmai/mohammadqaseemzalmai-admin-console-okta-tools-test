@@ -10,8 +10,8 @@ terraform {
 provider "okta" {
   org_name = "smartnews"
   base_url = "okta.com"
-  client_id = "0oacwito98vDGtfWV697"
-  private_key_id = "usyWR7kafat8WHLmA3YkcyEkDn0orkGxIbJaAa7Z8pQ"
+  client_id = var.client_id
+  private_key_id = var.private_key_id
   private_key = var.private_key
   scopes = ["okta.groups.manage","okta.users.manage","okta.apps.read","okta.apps.manage"]
 }
