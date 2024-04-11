@@ -1,0 +1,32 @@
+name: Okta Group Operation
+
+on:
+    workflow_dispatch: {}
+
+env:
+    OKTA_ORG_NAME: ${{ secrets.OKTA_ORG_NAME }}
+    OKTA_BASE_URL: ${{ secrets.OKTA_BASE_URL }}
+    OKTA_API_CLIENT_ID: ${{ secrets.OKTA_API_CLIENT_ID }}
+    OKTA_API_PRIVATE_KEY_ID: ${{ secrets.OKTA_API_PRIVATE_KEY_ID }}
+    OKTA_API_PRIVATE_KEY: ${{ secrets.OKTA_API_PRIVATE_KEY }}
+
+jobs:
+    terraform:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+      
+          - name: Setup Terraform
+            uses: hashicorp/setup-terraform@v3
+      
+          - name: Terraform Init and Apply
+            run: |
+              terraform init
+              terraform apply -auto-approve
+      
+          - name: Add Terraform State back to Project
+            uses: EndBug/add-and-commit@v9
+            with:
+              add: terraform.tfstate
+
