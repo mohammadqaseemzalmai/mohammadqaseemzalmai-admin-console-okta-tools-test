@@ -28,6 +28,4 @@ jobs:
           - name: Add Terraform State back to Project
             uses: EndBug/add-and-commit@v9
             with:
-              add: |
-              terraform.tfstate
-              terraform_apply.log
+              add: terraform.tfstate
