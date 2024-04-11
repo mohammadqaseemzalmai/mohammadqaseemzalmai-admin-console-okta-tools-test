@@ -1,5 +1,6 @@
 resource "okta_group" "Terraform-TEST" {
-    name                      = "Terraform-TEST"
+    name        = "Terraform-TEST"
+    description = "Test group for Terraform TEST"
 }
 
 
