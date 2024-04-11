@@ -23,6 +23,7 @@ jobs:
           - name: Terraform Init and Apply
             run: |
               terraform init
+              terraform plan
               terraform apply -auto-approve | tee terraform_apply.log
       
           - name: Add Terraform State back to Project
