@@ -5,5 +5,6 @@ resource "okta_group" "Terraform-TEST" {
 
 
 resource "okta_group" "Terraform-TEST1" {
-    name                      = "Terraform-TEST1"
+    name        = "Terraform-TEST1"
+    description = "TESt Group 2"
 }
