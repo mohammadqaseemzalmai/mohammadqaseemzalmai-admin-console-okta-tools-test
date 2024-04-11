@@ -5,7 +5,7 @@ on:
 
 env:
   OKTA_ORG_NAME: ${{ secrets.OKTA_ORG_NAME }}
-  OKTA_BASE_URL: ${{ secrets.OKTA_BASE_URL }}
+  # OKTA_BASE_URL: ${{ secrets.OKTA_BASE_URL }}
   OKTA_API_CLIENT_ID: ${{ secrets.OKTA_API_CLIENT_ID }}
   OKTA_API_PRIVATE_KEY_ID: ${{ secrets.OKTA_API_PRIVATE_KEY_ID }}
   OKTA_API_PRIVATE_KEY: ${{ secrets.OKTA_API_PRIVATE_KEY }}

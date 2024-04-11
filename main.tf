@@ -9,7 +9,7 @@ terraform {
 
 provider "okta" {
   # org_name = var.org_name
-  # base_url = var.base_url
+  base_url = "okta.com"
   # client_id = var.client_id
   # private_key_id = var.private_key_id
   # private_key = var.private_key
