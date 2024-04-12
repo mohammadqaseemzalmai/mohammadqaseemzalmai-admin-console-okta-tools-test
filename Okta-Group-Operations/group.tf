@@ -13,3 +13,7 @@ resource "okta_group" "AAA_NewGroup" {
   name = "AAA_NewGroup"
   description = "TEST description"
 }
+
+resource "okta_group" "group-branch" {
+  name = "group-branch"
+}
