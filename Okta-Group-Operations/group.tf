@@ -11,4 +11,5 @@ resource "okta_group" "Terraform-TEST1" {
 
 resource "okta_group" "AAA_NewGroup" {
   name = "AAA_NewGroup"
+  description = "TEST description"
 }
